@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { ColorModeButton, } from "@/components/ui/color-mode";
 import { Box  } from "@chakra-ui/react";
