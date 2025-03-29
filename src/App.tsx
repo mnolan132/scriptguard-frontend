@@ -1,17 +1,20 @@
 import "./App.css";
-import { ColorModeButton, } from "@/components/ui/color-mode";
-import { Box  } from "@chakra-ui/react";
-import {NavBar} from './components/NavBar'
+import { Box, Flex } from "@chakra-ui/react";
+import { NavBar } from "./components/NavBar";
+import { Documentation } from "./pages/docs/documentation";
 
 function App() {
-
   return (
-    <Box >
+    <Flex direction="column" h="100vh" bg={{ base: "white", _dark: "#212121" }}>
       <NavBar />
-      <Box pt={'64px'}></Box>
-      <p>Hello world!</p>
-      <ColorModeButton />
-    </Box>
+      <Box
+        flex="1" 
+        mt="64px" 
+        overflowY="auto"
+      >
+        <Documentation />
+      </Box>
+    </Flex>
   );
 }
 

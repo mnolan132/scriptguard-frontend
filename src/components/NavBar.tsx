@@ -17,16 +17,16 @@ export function NavBar() {
   return (
     <>
       <Box
-        position="absolute"
+        position="fixed"
         top="0"
         left="0"
         w="100%"
-        bg="bg"
+        bg={{ base: "white", _dark: "#000000" }}
         px={4}
         zIndex="1000"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>
+          <Box m={4}>
             <img
               src="/src/assets/ScriptguardLogo.png"
               alt="Logo"
