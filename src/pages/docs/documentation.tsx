@@ -54,7 +54,7 @@ export const Documentation = () => {
   const syntaxTheme = useColorModeValue(oneLight, oneDark); // Auto-switch based on color mode
 
   return (
-    <Box p={6} textAlign={"left"}>
+    <Box p={6} textAlign={"left"} maxW={"1000px"} m={"0 auto"}>
       <Heading size="xl">Documentation</Heading>
       <Text>
         A React component library for secure input handling, designed to prevent

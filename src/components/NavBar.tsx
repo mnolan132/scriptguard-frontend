@@ -11,9 +11,13 @@ import {
 } from "@chakra-ui/react";
 import { ColorModeButton } from "./ui/color-mode";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export function NavBar() {
   const { open, onToggle } = useDisclosure();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <>
       <Box
@@ -26,7 +30,7 @@ export function NavBar() {
         zIndex="1000"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box m={4}>
+          <Box m={4} onClick={() => navigate("/")} cursor={"pointer"}>
             <img
               src="/src/assets/ScriptguardLogo.png"
               alt="Logo"
@@ -46,8 +50,21 @@ export function NavBar() {
                 </Menu.Trigger>
                 <Portal>
                   <Menu.Positioner>
-                    <Menu.Content alignItems="center">
-                      <Menu.Item value="docs">Docs</Menu.Item>
+                    <Menu.Content alignItems="center" cursor={"pointer"}>
+                      <Menu.Item
+                        value="documentation"
+                        onClick={() => {
+                          navigate("/documentation")
+                          onToggle();
+                        }}
+                        bg={
+                          location.pathname === "/documentation"
+                            ? "blue.500"
+                            : "transparent"
+                        }
+                      >
+                        Docs
+                      </Menu.Item>
                       <Menu.Item value="components">Components</Menu.Item>
                       <Menu.Item value="about">About</Menu.Item>
                     </Menu.Content>
