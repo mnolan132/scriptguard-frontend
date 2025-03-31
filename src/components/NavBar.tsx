@@ -28,6 +28,7 @@ export function NavBar() {
         bg={{ base: "white", _dark: "#000000" }}
         px={4}
         zIndex="1000"
+        boxShadow="sm"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box m={4} onClick={() => navigate("/")} cursor={"pointer"}>
@@ -42,7 +43,7 @@ export function NavBar() {
             <Stack direction={"row"}>
               <ColorModeButton />
 
-              <Menu.Root positioning={{ placement: "left-start" }} open={open}>
+              <Menu.Root positioning={{ placement: "left-start" }} open={open} onInteractOutside={() => {onToggle()}}>
                 <Menu.Trigger>
                   <IconButton onClick={onToggle}>
                     {open ? <FaTimes /> : <FaBars />}
@@ -50,11 +51,12 @@ export function NavBar() {
                 </Menu.Trigger>
                 <Portal>
                   <Menu.Positioner>
-                    <Menu.Content alignItems="center" cursor={"pointer"}>
+                    <Menu.Content alignItems="center" >
                       <Menu.Item
+                        cursor={"pointer"}
                         value="documentation"
                         onClick={() => {
-                          navigate("/documentation")
+                          navigate("/documentation");
                           onToggle();
                         }}
                         bg={
@@ -65,8 +67,8 @@ export function NavBar() {
                       >
                         Docs
                       </Menu.Item>
-                      <Menu.Item value="components">Components</Menu.Item>
-                      <Menu.Item value="about">About</Menu.Item>
+                      <Menu.Item value="components" cursor={"pointer"}>Components</Menu.Item>
+                      <Menu.Item value="about" cursor={"pointer"}>About</Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>
                 </Portal>
