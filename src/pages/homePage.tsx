@@ -81,7 +81,7 @@ export const HomePage = () => {
                 <HoverCard.Arrow />
                 <Stack gap="1">
                   <Text textStyle="sm" fontWeight="semibold">
-                    Coming soon!
+                  🚀 Coming soon!
                   </Text>
                   <Text>
                     In the meantime, check out the{" "}
