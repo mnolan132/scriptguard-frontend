@@ -252,8 +252,18 @@ export const Documentation = () => {
         bg={{ base: "#ECECEC", _dark: "#424242" }}
         display={"flex"}
         justifyContent={"space-between"}
+        gap={2} 
+        overflowX={"auto"} 
+        wordBreak="break-word" 
+        whiteSpace="pre-wrap" 
       >
-        <Code variant={"surface"} size="lg">
+        <Code
+          variant={"surface"}
+          size="lg"
+          maxW="100%" // Ensure it doesn't exceed the parent width
+          wordBreak="break-word"
+          whiteSpace="pre-wrap"
+        >
           git clone https://github.com/mnolan132/scriptguard-library.git
         </Code>
         <Clipboard.Root value="git clone https://github.com/mnolan132/scriptguard-library.git">
@@ -264,6 +274,7 @@ export const Documentation = () => {
           </Clipboard.Trigger>
         </Clipboard.Root>
       </Box>
+
       <Text>2. Install dependencies:</Text>
       <Box
         m={5}

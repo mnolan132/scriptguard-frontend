@@ -67,8 +67,8 @@ export function NavBar() {
                       >
                         Docs
                       </Menu.Item>
-                      <Menu.Item value="components" cursor={"pointer"}>Components</Menu.Item>
-                      <Menu.Item value="about" cursor={"pointer"}>About</Menu.Item>
+                      <Menu.Item disabled value="components" cursor={"pointer"}>Components</Menu.Item>
+                      <Menu.Item disabled value="about" cursor={"pointer"}>About</Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>
                 </Portal>
