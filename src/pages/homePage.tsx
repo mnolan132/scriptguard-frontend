@@ -29,7 +29,7 @@ export const HomePage = () => {
         maxWidth={{ base: "100%", md: "875px" }}
         size={{ base: "xl", md: "3xl", lg: "5xl" }}
       >
-        <Text color={"blue.800"} fontWeight={"bold"}>
+        <Text color={"blue.700"} fontWeight={"bold"}>
           <Typewriter
             words={["<ScriptGuard />"]}
             loop={1}
@@ -40,7 +40,7 @@ export const HomePage = () => {
         </Text>
         <Highlight
           query={["security"]}
-          styles={{ color: "blue.800", fontWeight: "bold" }}
+          styles={{ color: "blue.700", fontWeight: "bold" }}
         >
           A component library that provides security that can keep pace.
         </Highlight>
