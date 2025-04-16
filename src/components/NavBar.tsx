@@ -7,7 +7,7 @@ import {
   useDisclosure,
   Stack,
   Portal,
-  IconButton,
+  Button,
 } from "@chakra-ui/react";
 import { ColorModeButton } from "./ui/color-mode";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -43,15 +43,21 @@ export function NavBar() {
             <Stack direction={"row"}>
               <ColorModeButton />
 
-              <Menu.Root positioning={{ placement: "left-start" }} open={open} onInteractOutside={() => {onToggle()}}>
-                <Menu.Trigger>
-                  <IconButton onClick={onToggle}>
+              <Menu.Root
+                positioning={{ placement: "left-start" }}
+                open={open}
+                onInteractOutside={() => {
+                  onToggle();
+                }}
+              >
+                <Menu.Trigger asChild>
+                  <Button onClick={onToggle}>
                     {open ? <FaTimes /> : <FaBars />}
-                  </IconButton>
+                  </Button>
                 </Menu.Trigger>
                 <Portal>
                   <Menu.Positioner>
-                    <Menu.Content alignItems="center" >
+                    <Menu.Content alignItems="center">
                       <Menu.Item
                         cursor={"pointer"}
                         value="documentation"
@@ -67,8 +73,24 @@ export function NavBar() {
                       >
                         Docs
                       </Menu.Item>
-                      <Menu.Item disabled value="components" cursor={"pointer"}>Components</Menu.Item>
-                      <Menu.Item disabled value="about" cursor={"pointer"}>About</Menu.Item>
+                      <Menu.Item
+                        cursor={"pointer"}
+                        value="components"
+                        onClick={() => {
+                          navigate("/components");
+                          onToggle();
+                        }}
+                        bg={
+                          location.pathname === "/components"
+                            ? "blue.500"
+                            : "transparent"
+                        }
+                      >
+                        Components
+                      </Menu.Item>
+                      <Menu.Item disabled value="about" cursor={"pointer"}>
+                        About
+                      </Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>
                 </Portal>

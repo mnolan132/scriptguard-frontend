@@ -3,6 +3,8 @@ import { Box, Flex } from "@chakra-ui/react";
 import { NavBar } from "./components/NavBar";
 import { Documentation } from "./pages/docs/documentation";
 import { HomePage } from "./pages/homePage";
+import { Components } from "./pages/components/components";
+import ComponentInfo from "./pages/components/componentInfo";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/documentation" element={<Documentation />} />
+            <Route path="/components" element={<Components />} />
+            <Route path="/components/:id" element={<ComponentInfo />} />
           </Routes>
         </Box>
       </Flex>
