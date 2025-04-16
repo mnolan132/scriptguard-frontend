@@ -3,6 +3,7 @@ import { useFetchComponent } from "@/common/hooks/useFetchComponent";
 import {
   Accordion,
   Box,
+  Code,
   Heading,
   Span,
   Spinner,
@@ -79,8 +80,8 @@ const ComponentInfo = () => {
             <Table.Body>
               {data.props.map((prop, idx) => (
                 <Table.Row key={idx}>
-                  <Table.Cell>{prop.name}</Table.Cell>
-                  <Table.Cell>{prop.type}</Table.Cell>
+                  <Table.Cell><Code>{prop.name}</Code></Table.Cell>
+                  <Table.Cell><Code>{prop.type}</Code></Table.Cell>
                   <Table.Cell>{prop.required ? "Yes" : "No"}</Table.Cell>
                   <Table.Cell>
                     {prop.defaultValue ? prop.defaultValue : "N/A"}

@@ -5,6 +5,7 @@ import { Documentation } from "./pages/docs/documentation";
 import { HomePage } from "./pages/homePage";
 import { Components } from "./pages/components/components";
 import ComponentInfo from "./pages/components/componentInfo";
+import About from "./pages/about/about";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/components" element={<Components />} />
             <Route path="/components/:id" element={<ComponentInfo />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Box>
       </Flex>

@@ -67,11 +67,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code variant={"outline"} size="lg">
           npm install scriptguard-library
         </Code>
         <Clipboard.Root value="npm install scriptguard-library">
@@ -88,11 +88,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code variant={"outline"} size="lg">
           yarn add scriptguard-library
         </Code>
         <Clipboard.Root value="yarn add scriptguard-library">
@@ -117,7 +117,7 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
@@ -146,7 +146,7 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
@@ -174,7 +174,7 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
@@ -203,7 +203,7 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
@@ -227,11 +227,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code variant={"outline"} size="lg">
           npm update scriptguard-library
         </Code>
         <Clipboard.Root value="npm update scriptguard-library">
@@ -249,7 +249,7 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
         gap={2} 
@@ -258,7 +258,7 @@ export const Documentation = () => {
         whiteSpace="pre-wrap" 
       >
         <Code
-          variant={"surface"}
+          variant={"outline"}
           size="lg"
           maxW="100%" // Ensure it doesn't exceed the parent width
           wordBreak="break-word"
@@ -280,11 +280,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code variant={"outline"} size="lg">
           cd scriptguard-library
           <br />
           npm install
@@ -308,11 +308,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code variant={"outline"} size="lg">
           npm run build
         </Code>
         <Clipboard.Root value="npm run build">
@@ -328,11 +328,11 @@ export const Documentation = () => {
         m={5}
         p={5}
         borderRadius={5}
-        bg={{ base: "#ECECEC", _dark: "#424242" }}
+        bg={{ base: "#FAFAFA", _dark: "#282C34" }}
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Code variant={"surface"} size="lg">
+        <Code size="lg" variant={"outline"}>
           npm test
         </Code>
         <Clipboard.Root value="npm test">

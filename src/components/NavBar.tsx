@@ -58,6 +58,21 @@ export function NavBar() {
                 <Portal>
                   <Menu.Positioner>
                     <Menu.Content alignItems="center">
+                    <Menu.Item
+                        cursor={"pointer"}
+                        value="home"
+                        onClick={() => {
+                          navigate("/");
+                          onToggle();
+                        }}
+                        bg={
+                          location.pathname === "/"
+                            ? "blue.500"
+                            : "transparent"
+                        }
+                      >
+                        Home
+                      </Menu.Item>
                       <Menu.Item
                         cursor={"pointer"}
                         value="documentation"
@@ -88,7 +103,19 @@ export function NavBar() {
                       >
                         Components
                       </Menu.Item>
-                      <Menu.Item disabled value="about" cursor={"pointer"}>
+                      <Menu.Item
+                        value="about"
+                        cursor={"pointer"}
+                        onClick={() => {
+                          navigate("/about");
+                          onToggle();
+                        }}
+                        bg={
+                          location.pathname === "/about"
+                            ? "blue.500"
+                            : "transparent"
+                        }
+                      >
                         About
                       </Menu.Item>
                     </Menu.Content>
