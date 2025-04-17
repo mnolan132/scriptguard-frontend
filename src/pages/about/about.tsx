@@ -9,8 +9,11 @@ import {
   Span,
   Text,
 } from "@chakra-ui/react";
+import { EmailDialog } from "@/components/emailDialog";
+import { Toaster } from "@/components/ui/toaster";
 
 const About = () => {
+
   return (
     <Box
       p={6}
@@ -21,6 +24,7 @@ const About = () => {
       flexDir={"column"}
       gap={6}
     >
+      <Toaster />
       <Heading>About ScriptGuard</Heading>
       <Text>
         Welcome to ScriptGuard — a growing library of components and utilities
@@ -81,6 +85,7 @@ const About = () => {
           </cite>
         </Blockquote.Caption>
       </Blockquote.Root>
+      <EmailDialog />
     </Box>
   );
 };
