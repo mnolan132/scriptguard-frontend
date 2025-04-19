@@ -87,7 +87,7 @@ export const EmailDialog = () => {
         <Dialog.Positioner>
           <Dialog.Content>
             <Dialog.Header>
-              <Dialog.Title>Contact Me</Dialog.Title>
+              <Dialog.Title>Contact</Dialog.Title>
             </Dialog.Header>
 
             <Dialog.Body>
