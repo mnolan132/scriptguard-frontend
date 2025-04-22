@@ -10,6 +10,8 @@ import {
 } from "@chakra-ui/react";
 import { EmailDialog } from "@/components/emailDialog";
 import { Toaster } from "@/components/ui/toaster";
+import avatar from "@/assets/mattbw.jpg";
+
 
 const About = () => {
 
@@ -75,7 +77,7 @@ const About = () => {
             <HStack mt="2" gap="3">
               <Avatar.Root size="sm">
                 <Avatar.Fallback name="Matthew Nolan" />
-                <Avatar.Image src="/src/assets/mattbw.jpg" />
+                <Avatar.Image src={avatar} />
               </Avatar.Root>
               <Span fontWeight="medium">
                 Matthew Nolan, Creator of ScriptGuard
