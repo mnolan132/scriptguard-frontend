@@ -33,7 +33,7 @@ export function NavBar() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box m={4} onClick={() => navigate("/")} cursor={"pointer"}>
             <img
-              src="/src/assets/ScriptguardLogo.png"
+              src="./src/assets/ScriptguardLogo.png"
               alt="Logo"
               style={{ height: "200px", width: "auto" }}
             />
