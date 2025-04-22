@@ -12,6 +12,8 @@ import {
 import { ColorModeButton } from "./ui/color-mode";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
+import Logo from "@/assets/ScriptguardLogo.png";
+
 
 export function NavBar() {
   const { open, onToggle } = useDisclosure();
@@ -33,7 +35,7 @@ export function NavBar() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box m={4} onClick={() => navigate("/")} cursor={"pointer"}>
             <img
-              src="./src/assets/ScriptguardLogo.png"
+              src={Logo}
               alt="Logo"
               style={{ height: "200px", width: "auto" }}
             />
