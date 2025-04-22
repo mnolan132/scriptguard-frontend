@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Component } from "@/types";
 import { Card, Link } from "@chakra-ui/react";
 import { CiLink } from "react-icons/ci";

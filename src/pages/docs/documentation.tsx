@@ -6,7 +6,6 @@ import {
   Clipboard,
   IconButton,
 } from "@chakra-ui/react";
-import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
   oneLight,
@@ -125,6 +124,7 @@ export const Documentation = () => {
           code={secureTextInputCode}
           language="typescript"
           style={syntaxTheme}
+          children={''}
         ></SyntaxHighlighter>
         <Clipboard.Root value={secureTextInputCode}>
           <Clipboard.Trigger asChild>
@@ -154,6 +154,7 @@ export const Documentation = () => {
           code={securePasswordInputCode}
           language="typescript"
           style={syntaxTheme}
+          children={''}
         ></SyntaxHighlighter>
         <Clipboard.Root value={securePasswordInputCode}>
           <Clipboard.Trigger asChild>
@@ -182,6 +183,7 @@ export const Documentation = () => {
           code={secureEmailInputCode}
           language="typescript"
           style={syntaxTheme}
+          children={''}
         ></SyntaxHighlighter>
         <Clipboard.Root value={secureEmailInputCode}>
           <Clipboard.Trigger asChild>
@@ -211,6 +213,7 @@ export const Documentation = () => {
           code={secureCopyButtonCode}
           language="typescript"
           style={syntaxTheme}
+          children={''}
         ></SyntaxHighlighter>
         <Clipboard.Root value={secureCopyButtonCode}>
           <Clipboard.Trigger asChild>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Heading, Grid, Spinner, Text, VStack } from "@chakra-ui/react";
 import { ComponentCard } from "./componentCard";
 import { useFetchComponents } from "@/common/hooks/useFetchComponents";
