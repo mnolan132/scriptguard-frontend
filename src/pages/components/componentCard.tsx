@@ -14,14 +14,21 @@ export const ComponentCard = ({ item }: { item: Component }) => {
         const image = await import(`@/assets/${item.name}.png`);
         setImageSrc(image.default);
       } catch {
-        setImageSrc(null); // No image found
+        setImageSrc(null);
       }
     };
     loadImage();
   }, [item.name]);
 
   return (
-    <Card.Root className="cursor-pointer">
+    <Card.Root
+      position="relative"
+      cursor="pointer"
+      transition="box-shadow 0.3s ease"
+      _hover={{ boxShadow: "lg" }}
+      p={4}
+      borderRadius="md"
+    >
       <Card.Body display="flex" flexDirection="column" alignItems="left">
         <Card.Title>{item.name}</Card.Title>
         {imageSrc && (
@@ -37,8 +44,8 @@ export const ComponentCard = ({ item }: { item: Component }) => {
         )}
         <Card.Description>{item.description}</Card.Description>
         <Card.Footer>
-          <Link onClick={() => navigate(`/components/${item.id}`)} colorPalette={"cyan"}>
-            {`View documentation`} <CiLink />
+          <Link onClick={() => navigate(`/components/${item.id}`)} color="cyan.500">
+            View documentation <CiLink />
           </Link>
         </Card.Footer>
       </Card.Body>
