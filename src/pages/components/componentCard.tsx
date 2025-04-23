@@ -23,7 +23,6 @@ export const ComponentCard = ({ item }: { item: Component }) => {
   return (
     <Card.Root
       position="relative"
-      cursor="pointer"
       transition="box-shadow 0.3s ease"
       _hover={{ boxShadow: "lg" }}
       p={4}
