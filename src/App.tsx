@@ -6,6 +6,7 @@ import { HomePage } from "./pages/homePage";
 import { Components } from "./pages/components/components";
 import ComponentInfo from "./pages/components/componentInfo";
 import About from "./pages/about/about";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       >
         <NavBar />
         <Box flex="1" w="100%" mt="64px" overflowY="auto">
+          <Breadcrumbs />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/documentation" element={<Documentation />} />
