@@ -17,6 +17,11 @@ import { useForm } from "react-hook-form";
 import { TfiEmail } from "react-icons/tfi";
 import emailjs from "@emailjs/browser";
 
+const EMAIL_SERVICE = import.meta.env.VITE_EMAIL_SERVICE;
+const EMAIL_TEMPLATE = import.meta.env.VITE_EMAIL_TEMPLATE;
+const EMAIL_TOKEN = import.meta.env.VITE_EMAIL_TOKEN;
+
+
 type FormValues = {
   name: string;
   email: string;
@@ -41,10 +46,10 @@ export const EmailDialog = () => {
     setLoading(true);
     emailjs
       .sendForm(
-        "service_qhzt58n",
-        "template_o7t254l",
+        `${EMAIL_SERVICE}`,
+        `${EMAIL_TEMPLATE}`,
         form.current,
-        "1lzf0BxE1Kcz3l_5F"
+        `${EMAIL_TOKEN}`
       )
       .then(
         () => {

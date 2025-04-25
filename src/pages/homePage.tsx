@@ -48,7 +48,7 @@ export const HomePage = () => {
         fontSize={{ base: "md", md: "lg" }}
       >
         Secure React input and utility components that handle basic security
-        needs of your front end, letting you scaling your project and user experience.
+        needs of your front end, letting you focus on scaling your project and user experience.
       </Text>
       <Box
         maxW={{ base: "100%", md: "250px" }}

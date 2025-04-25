@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { Component } from "@/types";
 
+const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+
 export const useFetchComponents = () => {
   const [data, setData] = useState<Component[] | null>(null);
   const [loading, setLoading] = useState(true);
@@ -11,7 +13,7 @@ export const useFetchComponents = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://5cvmq3bb4i.execute-api.us-east-1.amazonaws.com/api/components");
+        const response = await fetch(`${API_ENDPOINT}/components`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

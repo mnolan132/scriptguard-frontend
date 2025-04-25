@@ -37,7 +37,7 @@ export function NavBar() {
             <img
               src={Logo}
               alt="Logo"
-              style={{ height: "200px", width: "auto" }}
+              style={{ height: "60px", width: "auto" }}
             />
           </Box>
 
