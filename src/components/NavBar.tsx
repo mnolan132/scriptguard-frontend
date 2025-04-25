@@ -69,7 +69,7 @@ export function NavBar() {
                         }}
                         bg={
                           location.pathname === "/"
-                            ? "blue.500"
+                            ? "teal.500"
                             : "transparent"
                         }
                       >
@@ -84,7 +84,7 @@ export function NavBar() {
                         }}
                         bg={
                           location.pathname === "/documentation"
-                            ? "blue.500"
+                            ? "teal.500"
                             : "transparent"
                         }
                       >
@@ -99,7 +99,7 @@ export function NavBar() {
                         }}
                         bg={
                           location.pathname === "/components"
-                            ? "blue.500"
+                            ? "teal.500"
                             : "transparent"
                         }
                       >
@@ -114,7 +114,7 @@ export function NavBar() {
                         }}
                         bg={
                           location.pathname === "/about"
-                            ? "blue.500"
+                            ? "teal.500"
                             : "transparent"
                         }
                       >
