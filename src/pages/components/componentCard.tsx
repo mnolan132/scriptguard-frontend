@@ -14,11 +14,13 @@ export const ComponentCard = ({ item }: { item: Component }) => {
         const image = await import(`@/assets/${item.name}.png`);
         setImageSrc(image.default);
       } catch {
-        setImageSrc(null);
+        const defaultImage = await import('@/assets/ImgNotFound.jpg');
+        setImageSrc(defaultImage.default);
       }
     };
     loadImage();
   }, [item.name]);
+  
 
   return (
     <Card.Root
