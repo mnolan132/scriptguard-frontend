@@ -14,7 +14,7 @@ export const ComponentCard = ({ item }: { item: Component }) => {
         const image = await import(`@/assets/${item.name}.png`);
         setImageSrc(image.default);
       } catch {
-        const defaultImage = await import('@/assets/ImgNotFound.jpg');
+        const defaultImage = await import('@/assets/ImgNotFound.png');
         setImageSrc(defaultImage.default);
       }
     };
